@@ -94,7 +94,6 @@ const Contact: React.FC = () => {
             </div>
         </PageTransition>
     );
-    );
 };
 
 export default Contact;

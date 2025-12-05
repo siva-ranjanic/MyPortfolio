@@ -23,10 +23,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     className
 }) => {
     return (
-        <div className={cn(
-            "group flex flex-col bg-surface border border-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1",
-            className
-        )}>
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
+            className={cn(
+                "group flex flex-col bg-surface border border-slate-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1",
+                className
+            )}>
             {/* Image Placeholder */}
             <div className="h-48 bg-slate-100 relative overflow-hidden">
                 {imageUrl ? (
@@ -66,7 +71,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     )}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

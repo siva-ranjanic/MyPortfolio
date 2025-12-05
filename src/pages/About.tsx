@@ -65,7 +65,6 @@ const About: React.FC = () => {
             </div>
         </PageTransition>
     );
-    );
 };
 
 export default About;

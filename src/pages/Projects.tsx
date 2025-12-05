@@ -61,7 +61,6 @@ const Projects: React.FC = () => {
             </div>
         </PageTransition>
     );
-    );
 };
 
 export default Projects;
