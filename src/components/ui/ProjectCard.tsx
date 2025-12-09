@@ -33,15 +33,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 className
             )}>
             {/* Image Placeholder */}
-            <div className="h-48 bg-slate-100 relative overflow-hidden">
+            <div className="h-48 relative overflow-hidden group-hover:hue-rotate-15 transition-all duration-700">
                 {imageUrl ? (
                     <img src={imageUrl} alt={title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 text-slate-400">
-                        <span className="text-4xl font-light">Image</span>
+                    <div className={cn(
+                        "w-full h-full flex flex-col items-center justify-center p-6 text-white bg-gradient-to-br",
+                        // Deterministic gradient based on title length/char to keep it consistent re-renders
+                        title.length % 5 === 0 ? "from-violet-500 to-fuchsia-600" :
+                            title.length % 5 === 1 ? "from-cyan-500 to-blue-600" :
+                                title.length % 5 === 2 ? "from-emerald-400 to-teal-600" :
+                                    title.length % 5 === 3 ? "from-orange-400 to-pink-600" :
+                                        "from-indigo-500 to-purple-600"
+                    )}>
+                        <h4 className="text-2xl font-bold text-center opacity-90 drop-shadow-md">{title}</h4>
+                        <div className="mt-2 w-12 h-1 bg-white/30 rounded-full" />
                     </div>
                 )}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
             </div>
 
             <div className="flex-1 p-6 flex flex-col">

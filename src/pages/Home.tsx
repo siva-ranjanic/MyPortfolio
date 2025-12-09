@@ -6,14 +6,15 @@ import PageTransition from '../components/layout/PageTransition';
 
 const Home: React.FC = () => {
     const skills = [
-        { name: 'React', level: 'Advanced' },
         { name: 'Angular', level: 'Advanced' },
-        { name: 'TypeScript', level: 'Advanced' },
-        { name: 'JavaScript', level: 'Expert' },
-        { name: 'HTML5', level: 'Expert' },
-        { name: 'CSS3', level: 'Expert' },
-        { name: 'Tailwind CSS', level: 'Advanced' },
-        { name: 'Responsive Design', level: 'Expert' },
+        { name: 'React', level: 'Advanced' },
+        { name: 'Vite', level: 'Intermediate' },
+        { name: 'HTML', level: 'Expert' },
+        { name: 'CSS', level: 'Expert' },
+        { name: 'Bootstrap', level: 'Advanced' },
+        { name: 'Figma', level: 'Intermediate' },
+        { name: 'MongoDB', level: 'Intermediate' },
+        { name: 'Appsmith', level: 'Advanced' },
     ];
 
     return (

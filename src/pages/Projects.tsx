@@ -5,30 +5,51 @@ import PageTransition from '../components/layout/PageTransition';
 const Projects: React.FC = () => {
     const projects = [
         {
-            title: 'E-commerce Dashboard',
-            description: 'A comprehensive admin dashboard for managing products, orders, and analytics. Features real-time data visualization and dark mode.',
-            tags: ['React', 'TypeScript', 'Tailwind CSS', 'Recharts'],
+            title: 'complyment',
+            description: 'A professional web application built for client business compliance needs.',
+            tags: ['Client Project'],
             demoUrl: '#',
             repoUrl: '#'
         },
         {
-            title: 'Task Management App',
-            description: 'A collaborative task manager with drag-and-drop functionality, user authentication, and team workspaces.',
-            tags: ['Angular', 'RxJS', 'Firebase', 'Material UI'],
+            title: 'CLick to cancel',
+            description: 'A streamlined service cancellation platform with focus on user retention flows.',
+            tags: ['Client Project'],
             demoUrl: '#',
             repoUrl: '#'
         },
         {
-            title: 'Weather Forecast',
-            description: 'A beautiful weather application providing 7-day forecasts, location detection, and dynamic background themes based on weather conditions.',
-            tags: ['React', 'OpenWeather API', 'Styled Components'],
+            title: 'DMS (Document Management)',
+            description: 'Secure system for organizing, securing, and managing business documents.',
+            tags: ['Client Project', 'Management'],
             demoUrl: '#',
             repoUrl: '#'
         },
         {
-            title: 'Portfolio Website',
-            description: 'A personal portfolio website (this one!) designed to showcase skills and projects with a premium light theme.',
-            tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+            title: 'QMAZE',
+            description: 'A website developed for QMAZE client using basic web technologies.',
+            tags: ['HTML', 'CSS', 'Bootstrap'],
+            demoUrl: '#',
+            repoUrl: '#'
+        },
+        {
+            title: 'HR MANAGEMENT',
+            description: 'A comprehensive HR management system built for client management.',
+            tags: ['Angular', 'Appsmith', 'MongoDB'],
+            demoUrl: '#',
+            repoUrl: '#'
+        },
+        {
+            title: 'ANJAC College Portal',
+            description: 'An educational institution website built for Ayya Nadar JanakiAmmal College.',
+            tags: ['Angular', 'Appsmith', 'MongoDB'],
+            demoUrl: '#',
+            repoUrl: '#'
+        },
+        {
+            title: 'Authentication System',
+            description: 'Academic project focusing on secure user authentication flows.',
+            tags: ['Academic Project'],
             demoUrl: '#',
             repoUrl: '#'
         }
