@@ -46,13 +46,7 @@ const Projects: React.FC = () => {
             demoUrl: '#',
             repoUrl: '#'
         },
-        {
-            title: 'Authentication System',
-            description: 'Academic project focusing on secure user authentication flows.',
-            tags: ['Academic Project'],
-            demoUrl: '#',
-            repoUrl: '#'
-        }
+
     ];
 
     return (

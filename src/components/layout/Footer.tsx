@@ -8,14 +8,14 @@ const Footer: React.FC = () => {
                     © {new Date().getFullYear()} DevPortfolio. All rights reserved.
                 </p>
                 <div className="flex gap-6">
-                    <a href="#" className="text-slate-400 hover:text-primary transition-colors">
+                    <a href="https://github.com/siva-ranjanic" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-colors">
                         GitHub
                     </a>
-                    <a href="#" className="text-slate-400 hover:text-primary transition-colors">
+                    <a href="https://www.linkedin.com/in/siva-ranjani-b9b489264" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-colors">
                         LinkedIn
                     </a>
-                    <a href="#" className="text-slate-400 hover:text-primary transition-colors">
-                        Twitter
+                    <a href="https://wa.me/9626587290" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-colors">
+                        WhatsApp
                     </a>
                 </div>
             </div>
