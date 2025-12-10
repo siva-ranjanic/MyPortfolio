@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
     body {
-        @apply bg-background text-slate-900 antialiased;
+        @apply bg-background text-slate-900 antialiased font-sans;
     }
 
     h1,
@@ -13,6 +15,16 @@
     h4,
     h5,
     h6 {
-        @apply tracking-tight font-bold;
+        @apply font-display tracking-tight font-bold;
+    }
+}
+
+@layer utilities {
+    .glass {
+        @apply backdrop-blur-md bg-white/70 border border-white/50 shadow-sm;
+    }
+
+    .glass-hover {
+        @apply hover:bg-white/80 hover:shadow-md transition-all duration-300;
     }
 }

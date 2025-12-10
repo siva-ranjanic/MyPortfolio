@@ -40,28 +40,28 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     <div className={cn(
                         "w-full h-full flex flex-col items-center justify-center p-6 text-white bg-gradient-to-br",
                         // Deterministic gradient based on title length/char to keep it consistent re-renders
-                        title.length % 5 === 0 ? "from-violet-500 to-fuchsia-600" :
-                            title.length % 5 === 1 ? "from-cyan-500 to-blue-600" :
-                                title.length % 5 === 2 ? "from-emerald-400 to-teal-600" :
-                                    title.length % 5 === 3 ? "from-orange-400 to-pink-600" :
-                                        "from-indigo-500 to-purple-600"
+                        title.length % 5 === 0 ? "from-primary to-blue-600" :
+                            title.length % 5 === 1 ? "from-cyan-500 to-blue-500" :
+                                title.length % 5 === 2 ? "from-emerald-400 to-teal-500" :
+                                    title.length % 5 === 3 ? "from-rose-400 to-pink-500" :
+                                        "from-violet-500 to-purple-600"
                     )}>
-                        <h4 className="text-2xl font-bold text-center opacity-90 drop-shadow-md">{title}</h4>
-                        <div className="mt-2 w-12 h-1 bg-white/30 rounded-full" />
+                        <h4 className="text-2xl font-bold text-center opacity-95 drop-shadow-sm font-display tracking-tight">{title}</h4>
+                        <div className="mt-2 w-12 h-1 bg-white/40 rounded-full" />
                     </div>
                 )}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors duration-300" />
             </div>
 
             <div className="flex-1 p-6 flex flex-col">
-                <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">{title}</h3>
+                <h3 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-primary transition-colors font-display">{title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-1">
                     {description}
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
                     {tags.map((tag) => (
-                        <span key={tag} className="px-2.5 py-1 rounded-md bg-slate-50 text-slate-600 text-xs font-medium border border-slate-100">
+                        <span key={tag} className="px-3 py-1 rounded-full bg-slate-50 text-slate-600 text-xs font-semibold border border-slate-200 shadow-sm">
                             {tag}
                         </span>
                     ))}

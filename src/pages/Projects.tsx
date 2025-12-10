@@ -51,11 +51,11 @@ const Projects: React.FC = () => {
 
     return (
         <PageTransition>
-            <div className="min-h-screen pt-24 pb-16 px-6 bg-background">
+            <div className="min-h-screen pt-24 pb-16 px-6 bg-background font-sans">
                 <div className="container mx-auto max-w-6xl space-y-12">
                     <div className="text-center space-y-4">
-                        <h1 className="text-4xl md:text-5xl font-bold text-slate-900">Featured Projects</h1>
-                        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                        <h1 className="text-4xl md:text-5xl font-bold text-slate-900 font-display">Featured Projects</h1>
+                        <p className="text-lg text-slate-600 max-w-2xl mx-auto font-light">
                             A selection of projects that demonstrate my passion for building clean, performant, and user-centric web applications.
                         </p>
                     </div>
