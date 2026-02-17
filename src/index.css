@@ -6,7 +6,7 @@
 
 @layer base {
     body {
-        @apply bg-background text-slate-900 antialiased font-sans;
+        @apply bg-background text-slate-900 antialiased font-sans overflow-x-hidden;
     }
 
     h1,
@@ -17,14 +17,31 @@
     h6 {
         @apply font-display tracking-tight font-bold;
     }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-slate-300 rounded-full hover:bg-slate-400 transition-colors;
+    }
 }
 
 @layer utilities {
     .glass {
-        @apply backdrop-blur-md bg-white/70 border border-white/50 shadow-sm;
+        @apply backdrop-blur-md bg-white/70 border border-white/40 shadow-sm supports-[backdrop-filter]:bg-white/60;
     }
 
     .glass-hover {
-        @apply hover:bg-white/80 hover:shadow-md transition-all duration-300;
+        @apply hover:bg-white/90 hover:shadow-lg transition-all duration-300 hover:-translate-y-1;
+    }
+
+    .text-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
     }
 }

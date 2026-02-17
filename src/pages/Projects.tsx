@@ -51,19 +51,24 @@ const Projects: React.FC = () => {
 
     return (
         <PageTransition>
-            <div className="min-h-screen pt-24 pb-16 px-6 bg-background font-sans">
-                <div className="container mx-auto max-w-6xl space-y-12">
-                    <div className="text-center space-y-4">
-                        <h1 className="text-4xl md:text-5xl font-bold text-slate-900 font-display">Featured Projects</h1>
+            <div className="min-h-screen pt-32 pb-16 px-6 bg-background font-sans relative overflow-hidden">
+                {/* Background Blobs */}
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl -z-10 pointer-events-none animate-float"></div>
+                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-3xl -z-10 pointer-events-none animate-float" style={{ animationDelay: '3s' }}></div>
+
+                <div className="container mx-auto max-w-6xl space-y-12 relative z-10">
+                    <div className="text-center space-y-4 animate-slide-up">
+                        <h1 className="text-4xl md:text-5xl font-bold text-slate-900 font-display drop-shadow-sm">Featured Projects</h1>
                         <p className="text-lg text-slate-600 max-w-2xl mx-auto font-light">
-                            A selection of projects that demonstrate my passion for building clean, performant, and user-centric web applications.
+                            A selection of projects that demonstrate my passion for <span className="text-primary font-medium">building clean, performant</span>, and user-centric web applications.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {projects.map((project) => (
+                        {projects.map((project, index) => (
                             <ProjectCard
                                 key={project.title}
+                                index={index}
                                 title={project.title}
                                 description={project.description}
                                 tags={project.tags}
