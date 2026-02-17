@@ -16,7 +16,7 @@ const Home = () => {
   const menuData: MenuItem[] = [
     // RE User - General Menus
     { userType: 'RE User', parentMenu: 'My Task', subModule: '—', menuItem: 'My Task', sourceVol: '—', context: 'Main Dashboard' },
-    { userType: 'RE User', parentMenu: 'Notifications', subModule: '—', menuItem: 'Notification', sourceVol: '—', context: 'Alerts & Updates' },
+    { userType: 'RE User', parentMenu: 'Notification', subModule: '—', menuItem: 'Notification', sourceVol: '—', context: 'Alerts & Updates' },
     
     // RE User - KYC Management Single Operation
     { userType: 'RE User', parentMenu: 'KYC Management', subModule: 'Single Operation', menuItem: 'Search', sourceVol: 'Vol II', context: 'Search KYC Records' },
