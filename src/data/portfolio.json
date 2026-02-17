@@ -95,6 +95,26 @@
                 "Retention"
             ],
             "link": "#"
+        },
+        {
+            "title": "HR MANAGEMENT",
+            "description": "A comprehensive HR management system built for client management.",
+            "tech": [
+                "Angular",
+                "Appsmith",
+                "MongoDB"
+            ],
+            "link": "#"
+        },
+        {
+            "title": "ANJAC College Portal",
+            "description": "An educational institution website built for Ayya Nadar JanakiAmmal College.",
+            "tech": [
+                "Angular",
+                "MongoDB",
+                "Education"
+            ],
+            "link": "#"
         }
     ]
 }
