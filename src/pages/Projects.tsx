@@ -5,48 +5,53 @@ import PageTransition from '../components/layout/PageTransition';
 const Projects: React.FC = () => {
     const projects = [
         {
-            title: 'complyment',
-            description: 'A professional web application built for client business compliance needs.',
-            tags: ['Client Project'],
-            demoUrl: '#',
+            title: 'CERSAI - KYC Management System',
+            description: 'A high-security Government application submodule for managing KYC records. Integrated a complex multi-level approval hierarchy for deactivation, reactivation, suspension, and revocation of records.',
+            tags: ['React', 'Redux', 'Security', 'Government'],
             repoUrl: '#'
         },
         {
-            title: 'CLick to cancel',
-            description: 'A streamlined service cancellation platform with focus on user retention flows.',
-            tags: ['Client Project'],
-            demoUrl: '#',
+            title: 'Sathi Bazar',
+            description: 'A robust multi-vendor ecommerce platform similar to Amazon. Features a complex administrative flow with State and National admin roles and seller management.',
+            tags: ['Next.js', 'NestJS', 'Ecommerce'],
+            repoUrl: '#'
+        },
+        {
+            title: 'Quick Commerce - Medical Platform',
+            description: 'A specialized medical ecommerce platform focused on health services. Users can buy various medical tests like blood tests with a streamlined flow.',
+            tags: ['React Vite', 'NestJS', 'Medical'],
+            repoUrl: '#'
+        },
+        {
+            title: 'complyment',
+            description: 'A professional web application built for client business compliance needs.',
+            tags: ['Angular', 'NestJS', 'Compliance'],
             repoUrl: '#'
         },
         {
             title: 'DMS (Document Management)',
             description: 'Secure system for organizing, securing, and managing business documents.',
-            tags: ['Client Project', 'Management'],
-            demoUrl: '#',
+            tags: ['React Vite', 'NestJS', 'Management'],
             repoUrl: '#'
         },
         {
-            title: 'QMAZE',
-            description: 'A website developed for QMAZE client using basic web technologies.',
-            tags: ['HTML', 'CSS', 'Bootstrap'],
-            demoUrl: '#',
+            title: 'Click to cancel',
+            description: 'A plain JavaScript bundle that can integrate into any project for streamlined service cancellation flows.',
+            tags: ['JavaScript', 'Bundle', 'Retention'],
             repoUrl: '#'
         },
         {
             title: 'HR MANAGEMENT',
             description: 'A comprehensive HR management system built for client management.',
             tags: ['Angular', 'Appsmith', 'MongoDB'],
-            demoUrl: '#',
             repoUrl: '#'
         },
         {
             title: 'ANJAC College Portal',
             description: 'An educational institution website built for Ayya Nadar JanakiAmmal College.',
-            tags: ['Angular', 'Appsmith', 'MongoDB'],
-            demoUrl: '#',
+            tags: ['Angular', 'MongoDB', 'Education'],
             repoUrl: '#'
         },
-
     ];
 
     return (
@@ -72,7 +77,6 @@ const Projects: React.FC = () => {
                                 title={project.title}
                                 description={project.description}
                                 tags={project.tags}
-                                demoUrl={project.demoUrl}
                                 repoUrl={project.repoUrl}
                             />
                         ))}

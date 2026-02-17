@@ -1,0 +1,100 @@
+{
+    "name": "Sivaranjani C",
+    "role": "Full Stack Developer",
+    "bio": "Passionate Full Stack Developer with expertise in building modern, scalable web applications. Dedicated to creating elegant solutions and seamless user experiences.",
+    "skills": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Angular",
+        "NestJS",
+        "MongoDB",
+        "Node.js",
+        "Express.js"
+    ],
+    "socials": [
+        {
+            "platform": "GitHub",
+            "url": "https://github.com/siva-ranjanic",
+            "icon": "Github"
+        },
+        {
+            "platform": "LinkedIn",
+            "url": "https://linkedin.com/in/sivaranjani-c",
+            "icon": "Linkedin"
+        },
+        {
+            "platform": "Twitter",
+            "url": "https://twitter.com/sivaranjani_c",
+            "icon": "Twitter"
+        },
+        {
+            "platform": "Email",
+            "url": "mailto:sivaranjanic.devel@gmail.com",
+            "icon": "Mail"
+        }
+    ],
+    "projects": [
+        {
+            "title": "CERSAI - KYC Management System",
+            "description": "A high-security Government application submodule for managing KYC records with multi-level approval hierarchy.",
+            "tech": [
+                "React",
+                "Redux",
+                "TypeScript",
+                "Security"
+            ],
+            "link": "#"
+        },
+        {
+            "title": "Sathi Bazar",
+            "description": "A robust multi-vendor ecommerce platform similar to Amazon with complex administrative flows.",
+            "tech": [
+                "Next.js",
+                "NestJS",
+                "PostgreSQL"
+            ],
+            "link": "#"
+        },
+        {
+            "title": "Quick Commerce",
+            "description": "A specialized medical ecommerce platform for diagnostic tests and health services.",
+            "tech": [
+                "React Vite",
+                "NestJS",
+                "HealthTech"
+            ],
+            "link": "#"
+        },
+        {
+            "title": "complyment",
+            "description": "Professional web application for client business compliance needs.",
+            "tech": [
+                "Angular",
+                "NestJS",
+                "Compliance"
+            ],
+            "link": "#"
+        },
+        {
+            "title": "DMS",
+            "description": "Secure system for organizing and managing business documents.",
+            "tech": [
+                "React Vite",
+                "NestJS",
+                "DMS"
+            ],
+            "link": "#"
+        },
+        {
+            "title": "Click to Cancel",
+            "description": "Plain JavaScript bundle that can integrate into any project for streamlined service cancellation.",
+            "tech": [
+                "JavaScript",
+                "Bundle",
+                "Retention"
+            ],
+            "link": "#"
+        }
+    ]
+}

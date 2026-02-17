@@ -8,7 +8,6 @@ interface ProjectCardProps {
     description: string;
     tags: string[];
     imageUrl?: string;
-    demoUrl?: string;
     repoUrl?: string;
     className?: string;
     index?: number;
@@ -19,7 +18,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     description,
     tags,
     imageUrl,
-    demoUrl,
     repoUrl,
     className,
     index = 0
@@ -75,11 +73,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 </div>
 
                 <div className="flex gap-4 mt-auto">
-                    {demoUrl && (
-                        <a href={demoUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
-                            <Button size="sm" className="w-full shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30">Live Demo</Button>
-                        </a>
-                    )}
                     {repoUrl && (
                         <a href={repoUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
                             <Button variant="secondary" size="sm" className="w-full bg-slate-100 hover:bg-slate-200 border-transparent">Code</Button>
