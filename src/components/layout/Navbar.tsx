@@ -3,10 +3,14 @@ import { Link, useLocation } from 'react-router-dom';
 import { cn } from '../../utils/cn';
 import Button from '../ui/Button';
 import { Home, Briefcase, User, Mail } from 'lucide-react';
+import portfolioData from '../../data/portfolio.json';
+
 
 const Navbar: React.FC = () => {
+    const { name } = portfolioData;
     const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -36,9 +40,10 @@ const Navbar: React.FC = () => {
                 )}
             >
                 <div className="container mx-auto px-6 flex items-center justify-between">
-                    <Link to="/" className="text-2xl font-bold text-slate-900 tracking-tight">
-                        Portfolio<span className="text-primary">.</span>
+                    <Link to="/" className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight">
+                        {name}<span className="text-primary">.</span>
                     </Link>
+
 
                     <div className="hidden md:flex items-center gap-8">
                         {navLinks.map((link) => (
