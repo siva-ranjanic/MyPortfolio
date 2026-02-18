@@ -105,16 +105,6 @@
                 "MongoDB"
             ],
             "link": "#"
-        },
-        {
-            "title": "ANJAC College Portal",
-            "description": "An educational institution website built for Ayya Nadar JanakiAmmal College.",
-            "tech": [
-                "Angular",
-                "MongoDB",
-                "Education"
-            ],
-            "link": "#"
         }
     ]
 }

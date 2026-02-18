@@ -75,16 +75,7 @@ const About: React.FC = () => {
                         </div>
                     </section>
 
-                    {/* Philosophy Section */}
-                    <section className="animate-slide-up" style={{ animationDelay: '200ms' }}>
-                        <div className="glass bg-gradient-to-r from-primary/5 to-accent/5 p-10 rounded-2xl border border-white/60 shadow-sm text-center relative overflow-hidden">
-                            <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
-                            <h2 className="text-2xl font-bold text-slate-900 mb-6 font-display">My Philosophy</h2>
-                            <blockquote className="text-xl text-slate-600 italic font-medium leading-loose relative z-10">
-                                "I believe that great software is not just about code; it's about <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent font-bold not-italic">solving problems</span> and creating experiences that delight users."
-                            </blockquote>
-                        </div>
-                    </section>
+
                 </div>
             </div>
         </PageTransition>

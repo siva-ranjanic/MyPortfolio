@@ -33,9 +33,9 @@ const Contact: React.FC = () => {
                             <div className="space-y-4">
                                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 font-display tracking-tight drop-shadow-sm">Get in Touch</h1>
                                 <p className="text-lg text-slate-600 leading-relaxed font-light">
-                                    I'm currently open to new opportunities and collaborations.
                                     Whether you have a question or just want to say hi, I'll try my best to get back to you!
                                 </p>
+
                             </div>
 
                             <div className="space-y-6">

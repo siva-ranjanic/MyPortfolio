@@ -56,13 +56,7 @@ const Home = () => {
           {/* Typographic Hero Section */}
           <section className="relative pt-16 pb-8 flex flex-col items-center text-center">
             <motion.div variants={itemVariants} className="max-w-4xl">
-              <motion.span
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-widest uppercase text-primary bg-primary/5 rounded-full border border-primary/10"
-              >
-                Available for new opportunities
-              </motion.span>
+
 
               <h1 className="text-4xl lg:text-6xl font-display font-extrabold tracking-tight mb-6 leading-tight">
                 Creating <span className="text-gradient">Impactful</span> Digital Experiences.
@@ -195,8 +189,9 @@ const Home = () => {
               <div>
                 <h2 className="text-3xl lg:text-4xl font-display font-bold mb-6">Want to work together?</h2>
                 <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                  I'm currently available for freelance work and full-time opportunities. If you have a project that needs some creative refining, I'd love to hear from you.
+                  If you have a project that needs some creative refining, I'd love to hear from you.
                 </p>
+
                 <div className="flex flex-wrap gap-6">
                   <div className="flex items-center gap-3">
                     <div className="p-3 bg-white/10 rounded-2xl text-primary">

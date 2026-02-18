@@ -46,12 +46,7 @@ const Projects: React.FC = () => {
             tags: ['Angular', 'Appsmith', 'MongoDB'],
             repoUrl: '#'
         },
-        {
-            title: 'ANJAC College Portal',
-            description: 'An educational institution website built for Ayya Nadar JanakiAmmal College.',
-            tags: ['Angular', 'MongoDB', 'Education'],
-            repoUrl: '#'
-        },
+
     ];
 
     return (
