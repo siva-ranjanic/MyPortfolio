@@ -1,13 +1,12 @@
 import React from 'react';
-import { cn } from '../../utils/cn';
-import Button from './Button';
 import { motion } from 'framer-motion';
+import { cn } from '../../utils/cn';
+import { ExternalLink } from 'lucide-react';
 
 interface ProjectCardProps {
     title: string;
     description: string;
     tags: string[];
-    imageUrl?: string;
     repoUrl?: string;
     className?: string;
     index?: number;
@@ -17,48 +16,69 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     title,
     description,
     tags,
-    imageUrl,
     repoUrl,
     className,
     index = 0
 }) => {
+    const accentColors = [
+        '#7c3aed', '#06b6d4', '#059669', '#d97706', '#dc2626', '#9333ea', '#0ea5e9', '#16a34a'
+    ];
+    const color = accentColors[index % accentColors.length];
+
     return (
         <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.5, delay: (index % 3) * 0.08, ease: [0.22, 1, 0.36, 1] as const }}
+            whileHover={{ y: -4 }}
             className={cn(
-                "group flex flex-col bg-white border border-slate-100/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 hover:-translate-y-2",
+                'group bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden',
                 className
-            )}>
-            {/* Thin top accent bar — no gradient block */}
-            <div className="h-1 w-full bg-gradient-to-r from-primary/40 to-accent/40" />
+            )}
+        >
+            {/* Top color accent */}
+            <div className="h-0.5 w-full flex-shrink-0" style={{ backgroundColor: color }} />
 
-            <div className="flex-1 p-8 flex flex-col relative z-10">
-                <h3 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-primary transition-colors font-display tracking-tight">{title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-1 line-clamp-3">
-                    {description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-8">
+            <div className="flex-1 p-7 flex flex-col">
+                {/* Tags */}
+                <div className="flex flex-wrap gap-1.5 mb-5">
                     {tags.slice(0, 4).map((tag) => (
-                        <span key={tag} className="px-3 py-1 rounded-full bg-slate-50 text-slate-600 text-[11px] font-bold uppercase tracking-wider border border-slate-200 group-hover:border-primary/20 transition-colors">
+                        <span
+                            key={tag}
+                            className="px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-full bg-slate-50 text-slate-500 border border-slate-200"
+                        >
                             {tag}
                         </span>
                     ))}
-                    {tags.length > 4 && (
-                        <span className="px-3 py-1 rounded-full bg-slate-50 text-slate-500 text-[11px] font-bold border border-slate-200">
-                            +{tags.length - 4}
-                        </span>
-                    )}
                 </div>
 
-                <div className="flex gap-4 mt-auto">
-                    {repoUrl && (
-                        <a href={repoUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
-                            <Button variant="primary" size="sm" className="w-full">View Project</Button>
+                {/* Title */}
+                <h3 className="text-lg font-display font-bold text-slate-900 mb-2 group-hover:text-violet-700 transition-colors leading-snug">
+                    {title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-slate-500 text-sm leading-relaxed line-clamp-3 flex-1 mb-6">
+                    {description}
+                </p>
+
+                {/* Action */}
+                <div className="mt-auto">
+                    {repoUrl && repoUrl !== '#' ? (
+                        <a
+                            href={repoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group/btn inline-flex items-center gap-2 text-sm font-semibold text-violet-600 hover:text-violet-700 transition-colors"
+                        >
+                            View Project
+                            <ExternalLink size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                         </a>
+                    ) : (
+                        <span className="inline-flex items-center gap-2 text-sm font-semibold text-slate-300 cursor-not-allowed">
+                            Private Project
+                        </span>
                     )}
                 </div>
             </div>
