@@ -1,21 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import Button from '../components/ui/Button';
 import Input from '../components/ui/Input';
 import PageTransition from '../components/layout/PageTransition';
 
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as string;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string;
+
 const Contact: React.FC = () => {
+    const formRef = useRef<HTMLFormElement>(null);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: ''
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [status, setStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        const subject = `Portfolio Contact from ${formData.name}`;
-        const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-        window.location.href = `mailto:ranjanidream13@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        setFormData({ name: '', email: '', message: '' });
+        if (!formRef.current) return;
+
+        setIsSubmitting(true);
+        setStatus(null);
+
+        try {
+            await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, {
+                publicKey: PUBLIC_KEY,
+            });
+            setStatus({ type: 'success', message: '✅ Message sent! I\'ll get back to you soon.' });
+            setFormData({ name: '', email: '', message: '' });
+        } catch (error) {
+            setStatus({ type: 'error', message: '❌ Failed to send. Please try again or email me directly.' });
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -35,7 +55,6 @@ const Contact: React.FC = () => {
                                 <p className="text-lg text-slate-600 leading-relaxed font-light">
                                     Whether you have a question or just want to say hi, I'll try my best to get back to you!
                                 </p>
-
                             </div>
 
                             <div className="space-y-6">
@@ -61,10 +80,11 @@ const Contact: React.FC = () => {
                         </div>
 
                         {/* Contact Form */}
-                        <form onSubmit={handleSubmit} className="glass p-8 rounded-3xl space-y-6 relative overflow-hidden animate-slide-up" style={{ animationDelay: '200ms' }}>
+                        <form ref={formRef} onSubmit={handleSubmit} className="glass p-8 rounded-3xl space-y-6 relative overflow-hidden animate-slide-up" style={{ animationDelay: '200ms' }}>
                             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent"></div>
                             <Input
                                 label="Name"
+                                name="name"
                                 placeholder="Your name"
                                 value={formData.name}
                                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -72,6 +92,7 @@ const Contact: React.FC = () => {
                             />
                             <Input
                                 label="Email"
+                                name="email"
                                 type="email"
                                 placeholder="your@email.com"
                                 value={formData.email}
@@ -83,6 +104,7 @@ const Contact: React.FC = () => {
                                     Message
                                 </label>
                                 <textarea
+                                    name="message"
                                     className="flex min-h-[120px] w-full rounded-xl border border-slate-200 bg-white/50 px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary disabled:cursor-not-allowed disabled:opacity-50 resize-y transition-all"
                                     placeholder="How can I help you?"
                                     value={formData.message}
@@ -90,8 +112,20 @@ const Contact: React.FC = () => {
                                     required
                                 />
                             </div>
-                            <Button type="submit" className="w-full shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-shadow">
-                                Send Message
+
+                            {/* Status Message */}
+                            {status && (
+                                <div className={`text-sm px-4 py-3 rounded-xl font-medium ${status.type === 'success' ? 'bg-green-50 text-green-700 border border-green-200' : 'bg-red-50 text-red-700 border border-red-200'}`}>
+                                    {status.message}
+                                </div>
+                            )}
+
+                            <Button
+                                type="submit"
+                                disabled={isSubmitting}
+                                className="w-full shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-shadow disabled:opacity-70 disabled:cursor-not-allowed"
+                            >
+                                {isSubmitting ? 'Sending...' : 'Send Message'}
                             </Button>
                         </form>
 

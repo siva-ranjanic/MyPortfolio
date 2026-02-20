@@ -16,7 +16,7 @@ const About: React.FC = () => {
                             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full filter blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors duration-700"></div>
                             <div className="prose prose-lg text-slate-600 max-w-none leading-relaxed relative z-10">
                                 <p>
-                                    Hello! I'm <strong className="text-primary">C. SIVARANJANI</strong>, a Software Developer - Front End with professional experience building modern web applications since June 2023.
+                                    Hello! I'm <strong className="text-primary">C. SIVARANJANI</strong>, a Software Developer - Front End with <strong className="text-primary">2.5+ years</strong> of professional experience building modern web applications since June 2023.
                                     My journey in web development has been driven by a love for creating intuitive and visually appealing user interfaces.
                                 </p>
                                 <p>
@@ -39,15 +39,24 @@ const About: React.FC = () => {
                                         <h3 className="text-2xl font-bold text-slate-800">Software Developer - Front End</h3>
                                         <span className="px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full w-fit">June 2023 - Present</span>
                                     </div>
-                                    <p className="text-slate-700 font-semibold text-lg">Skill mine, Bangalore</p>
+                                    <p className="text-slate-700 font-semibold text-lg">Skill mine, Sivakasi</p>
                                     <div className="text-slate-600 leading-relaxed pt-2">
-                                        <p className="font-medium mb-2">Key Projects:</p>
-                                        <ul className="list-disc list-inside space-y-1 ml-2 marker:text-primary">
-                                            <li><strong>complyment</strong> - Business compliance tracking</li>
-                                            <li><strong>CLick to cancel</strong> - Service cancellation platform</li>
-                                            <li><strong>DMS</strong> - Document Management System</li>
-                                        </ul>
+                                        <p>Successfully delivered multiple web applications, ensuring high performance and responsive design across all devices.</p>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div className="glass hover:bg-white/80 transition-colors duration-300 p-8 rounded-2xl border border-white/60 shadow-sm relative pl-8 md:pl-12">
+                                <div className="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-b from-blue-400 to-indigo-500 rounded-l-2xl"></div>
+                                <div className="space-y-3">
+                                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                                        <h3 className="text-2xl font-bold text-slate-800">Software Developer Intern</h3>
+                                        <span className="px-3 py-1 bg-blue-100 text-blue-600 text-sm font-semibold rounded-full w-fit">Jan 2023 - June 2023</span>
+                                    </div>
+                                    <p className="text-slate-700 font-semibold text-lg">Cooldreamers</p>
+                                    <p className="text-slate-600 leading-relaxed pt-2">
+                                        Gained hands-on experience in full-stack development and collaborated with senior developers on key modules.
+                                    </p>
                                 </div>
                             </div>
 
@@ -68,6 +77,12 @@ const About: React.FC = () => {
                                             <p className="text-slate-600 text-sm">Ayya Nadar JanakiAmmal College</p>
                                             <p className="text-slate-400 text-xs">2018-2021</p>
                                             <p className="text-primary font-bold mt-1">77%</p>
+                                        </div>
+                                        <div className="space-y-1">
+                                            <h4 className="text-lg font-bold text-slate-800">12th Grade (HSC)</h4>
+                                            <p className="text-slate-600 text-sm">SHNV Hr Sec School, Sivakasi</p>
+                                            <p className="text-slate-400 text-xs">2017-2018</p>
+                                            <p className="text-primary font-bold mt-1">82%</p>
                                         </div>
                                     </div>
                                 </div>
