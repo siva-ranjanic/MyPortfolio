@@ -2,6 +2,11 @@
     "name": "Sivaranjani C",
     "role": "Full Stack Developer",
     "bio": "Passionate Full Stack Developer with expertise in building modern, scalable web applications. Dedicated to creating elegant solutions and seamless user experiences.",
+    "stats": [
+        { "value": "2.5+", "label": "Years of Experience" },
+        { "value": "6+", "label": "Completed Projects" },
+        { "value": "6K+", "label": "Hours Worked" }
+    ],
     "experience": [
         {
             "role": "Software Developer — Front End",
@@ -48,6 +53,39 @@
         "Node.js",
         "Express.js"
     ],
+    "certifications": [
+        {
+            "title": "Angular Complete Guide",
+            "issuer": "Udemy",
+            "year": "2023",
+            "file": "angular"
+        },
+        {
+            "title": "React - The Complete Guide",
+            "issuer": "Udemy",
+            "year": "2023",
+            "file": "react"
+        },
+        {
+            "title": "Node.js, Express, MongoDB",
+            "issuer": "Udemy",
+            "year": "2023",
+            "file": ""
+        }
+    ],
+    "recognition": [
+        {
+            "title": "Star Performer",
+            "period": "Q1 - Jan 2026",
+            "company": "Skill mine",
+            "description": "Awarded Star Performer of the Quarter (NV - Jan 2026) in recognition of outstanding contributions, consistent high-quality delivery, and dedication to team success."
+        }
+    ],
+    "languages": [
+        "Tamil (Native)",
+        "English (Professional)",
+        "Hindi (Conversational)"
+    ],
     "socials": [
         {
             "platform": "GitHub",
@@ -74,12 +112,7 @@
         {
             "title": "Skillzen",
             "description": "An intelligent multi-tenant Learning Management System leveraging AI/ML for personalized, adaptive learning experiences. Automates content creation and predicts learner analytics.",
-            "tech": [
-                "Remix JS",
-                "NestJS",
-                "MongoDB",
-                "Gemini AI"
-            ],
+            "tech": ["Remix JS", "NestJS", "MongoDB", "Gemini AI"],
             "link": "#",
             "highlights": [
                 "AI-Automated Content Creation",
@@ -91,72 +124,43 @@
         {
             "title": "CERSAI - KYC Management System",
             "description": "A high-security Government application submodule for managing KYC records with multi-level approval hierarchy.",
-            "tech": [
-                "React",
-                "Redux",
-                "TypeScript",
-                "Security"
-            ],
+            "tech": ["React", "Redux", "TypeScript", "Security"],
             "link": "#"
         },
         {
             "title": "Sathi Bazar",
             "description": "A robust multi-vendor ecommerce platform similar to Amazon with complex administrative flows.",
-            "tech": [
-                "Next.js",
-                "NestJS",
-                "PostgreSQL"
-            ],
+            "tech": ["Next.js", "NestJS", "PostgreSQL"],
             "link": "#"
         },
         {
             "title": "Quick Commerce",
             "description": "A specialized medical ecommerce platform for diagnostic tests and health services.",
-            "tech": [
-                "React Vite",
-                "NestJS",
-                "HealthTech"
-            ],
+            "tech": ["React Vite", "NestJS", "HealthTech"],
             "link": "#"
         },
         {
             "title": "complyment",
             "description": "Professional web application for client business compliance needs.",
-            "tech": [
-                "Angular",
-                "NestJS",
-                "Compliance"
-            ],
+            "tech": ["Angular", "NestJS", "Compliance"],
             "link": "#"
         },
         {
             "title": "DMS",
             "description": "Secure system for organizing and managing business documents.",
-            "tech": [
-                "React Vite",
-                "NestJS",
-                "DMS"
-            ],
+            "tech": ["React Vite", "NestJS", "DMS"],
             "link": "#"
         },
         {
             "title": "Click to Cancel",
             "description": "Plain JavaScript bundle that can integrate into any project for streamlined service cancellation.",
-            "tech": [
-                "JavaScript",
-                "Bundle",
-                "Retention"
-            ],
+            "tech": ["JavaScript", "Bundle", "Retention"],
             "link": "#"
         },
         {
             "title": "HR MANAGEMENT",
             "description": "A comprehensive HR management system built for client management.",
-            "tech": [
-                "Angular",
-                "Appsmith",
-                "MongoDB"
-            ],
+            "tech": ["Angular", "Appsmith", "MongoDB"],
             "link": "#"
         }
     ]

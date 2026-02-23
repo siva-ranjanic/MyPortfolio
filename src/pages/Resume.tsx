@@ -1,7 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Printer, ArrowLeft, Mail, Linkedin, MapPin, Award, Code2, Sparkles, Binary, Star } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import portfolioData from '../data/portfolio.json';
 
 const Resume: React.FC = () => {
@@ -26,15 +24,15 @@ const Resume: React.FC = () => {
             <style dangerouslySetInnerHTML={{
                 __html: `
                 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
-                
+
                 @media print {
-                    @page { 
-                        margin: 0; 
+                    @page {
+                        margin: 0;
                         size: A4;
                     }
                     html, body {
                         height: auto;
-                        margin: 0 !important; 
+                        margin: 0 !important;
                         padding: 0 !important;
                         overflow: visible;
                         -webkit-print-color-adjust: exact !important;
@@ -80,14 +78,14 @@ const Resume: React.FC = () => {
             `}} />
 
             <div className="max-w-[850px] mx-auto print:max-w-none">
-                {/* Controls - Premium Web View */}
+                {/* Controls */}
                 <div className="flex justify-between items-center mb-12 print:hidden px-4">
-                    <Link to="/" className="group flex items-center gap-3 text-slate-400 hover:text-primary transition-all font-bold text-xs uppercase tracking-[0.2em]">
+                    <button onClick={() => window.history.back()} className="group flex items-center gap-3 text-slate-400 hover:text-primary transition-all font-bold text-xs uppercase tracking-[0.2em]">
                         <div className="p-2 rounded-full bg-white shadow-sm group-hover:shadow-md transition-all">
                             <ArrowLeft size={16} />
                         </div>
                         Back to Portfolio
-                    </Link>
+                    </button>
                     <button
                         onClick={handlePrint}
                         className="bg-slate-900 text-white px-10 py-4 rounded-full font-bold text-[11px] uppercase tracking-[0.2em] flex items-center gap-3 hover:bg-primary transition-all shadow-xl hover:shadow-primary/40 active:scale-95"
@@ -97,11 +95,7 @@ const Resume: React.FC = () => {
                 </div>
 
                 {/* Resume Document */}
-                <motion.div
-                    initial={{ y: 30, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    className="resume-container space-y-10 print:space-y-0 font-outfit"
-                >
+                <div className="resume-container space-y-10 print:space-y-0 font-outfit animate-fade-in-up">
                     {/* PAGE 1 */}
                     <div className="bg-white shadow-[0_30px_100px_rgba(0,0,0,0.04)] border border-slate-100 rounded-[2rem] print:rounded-none resume-page p-12 md:p-20">
                         {/* Elegant Header */}
@@ -137,9 +131,7 @@ const Resume: React.FC = () => {
                         </div>
 
                         <div className="grid grid-cols-12 gap-16 print:gap-12">
-                            {/* Main Content Area */}
                             <div className="col-span-12 md:col-span-8 print:col-span-8 space-y-12 print:space-y-8">
-                                {/* Profile */}
                                 <section>
                                     <div className="flex items-center gap-4 mb-6">
                                         <div className="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center text-primary"><Sparkles size={18} /></div>
@@ -150,7 +142,6 @@ const Resume: React.FC = () => {
                                     </p>
                                 </section>
 
-                                {/* Work Experience */}
                                 <section>
                                     <div className="flex items-center gap-4 mb-10 print:mb-6">
                                         <div className="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center text-primary"><Binary size={20} /></div>
@@ -159,7 +150,7 @@ const Resume: React.FC = () => {
                                     <div className="space-y-12 print:space-y-8">
                                         {experience.map((exp: any, i: number) => (
                                             <div key={i} className="relative pl-8 print:pl-6 border-l-2 border-slate-50 hover:border-primary/20 transition-colors">
-                                                <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-white border-2 border-slate-200 group-hover:border-primary group-hover:bg-primary transition-all" />
+                                                <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-white border-2 border-slate-200" />
                                                 <div className="flex justify-between items-baseline mb-2">
                                                     <h3 className="text-xl font-bold text-slate-900 tracking-tight">{exp.role}</h3>
                                                     <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{exp.duration}</span>
@@ -171,7 +162,6 @@ const Resume: React.FC = () => {
                                                     {exp.description} Leading technical initiatives to optimize delivery pipelines and user interaction patterns across cross-platform environments.
                                                 </p>
 
-                                                {/* Integrated Recognition Highlight */}
                                                 {exp.company === 'Skill mine' && recognition && (
                                                     <div className="mt-6 print:mt-4 p-5 print:p-4 rounded-2xl bg-primary text-white shadow-xl shadow-primary/20 relative overflow-hidden group max-w-[500px]">
                                                         <div className="flex items-center gap-5 relative z-10">
@@ -188,7 +178,6 @@ const Resume: React.FC = () => {
                                                                 </p>
                                                             </div>
                                                         </div>
-                                                        {/* Decorative background element */}
                                                         <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                                                             <Star size={60} className="fill-white" />
                                                         </div>
@@ -201,9 +190,7 @@ const Resume: React.FC = () => {
                                 </section>
                             </div>
 
-                            {/* Sidebar Area */}
                             <div className="col-span-12 md:col-span-4 print:col-span-4 space-y-14">
-                                {/* Stack / Expertise */}
                                 <section>
                                     <h2 className="text-[11px] font-black uppercase tracking-[0.4em] text-slate-900 mb-8 border-b border-primary/20 pb-4">Core Ecosystem</h2>
                                     <div className="flex flex-wrap gap-2">
@@ -215,7 +202,6 @@ const Resume: React.FC = () => {
                                     </div>
                                 </section>
 
-                                {/* Academic */}
                                 <section>
                                     <h2 className="text-[11px] font-black uppercase tracking-[0.4em] text-slate-900 mb-8 print:mb-4 border-b border-primary/20 pb-4">Academic Background</h2>
                                     <div className="space-y-8 print:space-y-4">
@@ -234,7 +220,6 @@ const Resume: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Page Footer Print */}
                         <div className="page-footer hidden print:flex">
                             <div>{name} — Confidential Candidate Profile</div>
                             <div>Page 1 / 2</div>
@@ -322,17 +307,16 @@ const Resume: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Page Footer Print */}
                         <div className="page-footer hidden print:flex">
                             <div>Elite Developer Profile — {name}</div>
                             <div>Page 2 / 2</div>
                         </div>
                     </div>
-                </motion.div>
+                </div>
 
                 <div className="mt-16 text-center print:hidden px-4">
                     <p className="text-slate-300 text-[10px] font-black uppercase tracking-[0.5em] flex items-center justify-center gap-6">
-                        <div className="w-12 h-px bg-slate-200" /> Designer Component System <div className="w-12 h-px bg-slate-200" />
+                        <span className="w-12 h-px bg-slate-200" /> Designer Component System <span className="w-12 h-px bg-slate-200" />
                     </p>
                 </div>
             </div>
