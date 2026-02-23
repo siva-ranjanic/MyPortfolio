@@ -66,7 +66,7 @@
         },
         {
             "platform": "Email",
-            "url": "mailto:sivaranjanic.devel@gmail.com",
+            "url": "mailto:ranjanidream13@gmail.com",
             "icon": "Mail"
         }
     ],
@@ -159,27 +159,5 @@
             ],
             "link": "#"
         }
-    ],
-    "certifications": [
-        {
-            "title": "Angular - The Complete Guide",
-            "issuer": "Udemy",
-            "year": "2023"
-        },
-        {
-            "title": "React - The Complete Guide",
-            "issuer": "Udemy",
-            "year": "2023"
-        }
-    ],
-    "languages": [
-        "English (Professional)",
-        "Tamil (Native)"
-    ],
-    "recognition": {
-        "title": "Star Performer",
-        "description": "Awarded Star Performer (NV · Nov 2024 - Jan 2026) in recognition of outstanding contributions, consistent high-quality delivery, and dedication to team success.",
-        "period": "NOVEMBER - JAN 2026",
-        "org": "NV"
-    }
+    ]
 }
