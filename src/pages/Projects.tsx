@@ -54,7 +54,7 @@ const Projects: React.FC = () => {
             <div className="min-h-screen pt-32 pb-24 md:pb-16 px-6 bg-background font-sans relative overflow-hidden">
                 {/* Background Blobs */}
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl -z-10 pointer-events-none animate-float"></div>
-                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-3xl -z-10 pointer-events-none animate-float" style={{ animationDelay: '3s' }}></div>
+                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl -z-10 pointer-events-none animate-float" style={{ animationDelay: '3s' }}></div>
 
                 <div className="container mx-auto max-w-6xl space-y-12 relative z-10">
                     <div className="text-center space-y-4 animate-slide-up">

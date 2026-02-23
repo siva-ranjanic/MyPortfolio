@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     const { name, socials } = portfolioData;
 
     return (
-        <footer className="bg-white/80 backdrop-blur-sm border-t border-slate-200 py-12 mt-auto">
+        <footer className="bg-white/80 backdrop-blur-sm border-t border-slate-200 py-12 mt-auto print:hidden">
             <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div className="flex flex-col items-center md:items-start gap-1">
                     <span className="font-display font-bold text-slate-900 text-lg">{name}</span>

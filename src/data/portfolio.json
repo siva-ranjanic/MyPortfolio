@@ -2,6 +2,42 @@
     "name": "Sivaranjani C",
     "role": "Full Stack Developer",
     "bio": "Passionate Full Stack Developer with expertise in building modern, scalable web applications. Dedicated to creating elegant solutions and seamless user experiences.",
+    "experience": [
+        {
+            "role": "Software Developer — Front End",
+            "company": "Skill mine",
+            "location": "Sivakasi",
+            "duration": "June 2023 – Present",
+            "description": "Successfully delivered multiple web applications, ensuring high performance and responsive design across all devices."
+        },
+        {
+            "role": "Software Developer Intern",
+            "company": "Cooldreamers",
+            "location": "",
+            "duration": "Jan 2023 – June 2023",
+            "description": "Gained hands-on experience in full-stack development and collaborated with senior developers on key modules."
+        }
+    ],
+    "education": [
+        {
+            "degree": "MCA",
+            "school": "Ayya Nadar Janaki Ammal College",
+            "year": "2021–2023",
+            "score": "82%"
+        },
+        {
+            "degree": "B.Sc (Computer Science)",
+            "school": "Ayya Nadar Janaki Ammal College",
+            "year": "2018–2021",
+            "score": "77%"
+        },
+        {
+            "degree": "12th Grade (HSC)",
+            "school": "SHNV Hr Sec School, Sivakasi",
+            "year": "2017–2018",
+            "score": "82%"
+        }
+    ],
     "skills": [
         "React",
         "TypeScript",
@@ -35,6 +71,23 @@
         }
     ],
     "projects": [
+        {
+            "title": "Skillzen",
+            "description": "An intelligent multi-tenant Learning Management System leveraging AI/ML for personalized, adaptive learning experiences. Automates content creation and predicts learner analytics.",
+            "tech": [
+                "Remix JS",
+                "NestJS",
+                "MongoDB",
+                "Gemini AI"
+            ],
+            "link": "#",
+            "highlights": [
+                "AI-Automated Content Creation",
+                "Adaptive Learning Paths",
+                "Predictive Learner Analytics",
+                "Multi-Tenant Architecture"
+            ]
+        },
         {
             "title": "CERSAI - KYC Management System",
             "description": "A high-security Government application submodule for managing KYC records with multi-level approval hierarchy.",
@@ -106,5 +159,27 @@
             ],
             "link": "#"
         }
-    ]
+    ],
+    "certifications": [
+        {
+            "title": "Angular - The Complete Guide",
+            "issuer": "Udemy",
+            "year": "2023"
+        },
+        {
+            "title": "React - The Complete Guide",
+            "issuer": "Udemy",
+            "year": "2023"
+        }
+    ],
+    "languages": [
+        "English (Professional)",
+        "Tamil (Native)"
+    ],
+    "recognition": {
+        "title": "Star Performer",
+        "description": "Awarded Star Performer (NV · Nov 2024 - Jan 2026) in recognition of outstanding contributions, consistent high-quality delivery, and dedication to team success.",
+        "period": "NOVEMBER - JAN 2026",
+        "org": "NV"
+    }
 }

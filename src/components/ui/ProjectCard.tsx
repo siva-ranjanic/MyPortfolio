@@ -21,7 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     index = 0
 }) => {
     const accentColors = [
-        '#7c3aed', '#06b6d4', '#059669', '#d97706', '#dc2626', '#9333ea', '#0ea5e9', '#16a34a'
+        '#0D9488', '#0f766e', '#0891b2', '#0e7490', '#0D9488', '#0f766e', '#0891b2', '#0e7490'
     ];
     const color = accentColors[index % accentColors.length];
 
@@ -54,7 +54,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-display font-bold text-slate-900 mb-2 group-hover:text-violet-700 transition-colors leading-snug">
+                <h3 className="text-lg font-display font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors leading-snug">
                     {title}
                 </h3>
 
@@ -70,7 +70,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                             href={repoUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group/btn inline-flex items-center gap-2 text-sm font-semibold text-violet-600 hover:text-violet-700 transition-colors"
+                            className="group/btn inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-teal-700 transition-colors"
                         >
                             View Project
                             <ExternalLink size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
