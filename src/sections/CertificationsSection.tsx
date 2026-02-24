@@ -1,4 +1,3 @@
-import React from 'react';
 import { Award, Download, FileText } from 'lucide-react';
 import portfolioData from '../data/portfolio.json';
 
