@@ -41,18 +41,19 @@
             "school": "SHNV Hr Sec School, Sivakasi",
             "year": "2017–2018",
             "score": "82%"
+        },
+        {
+            "degree": "SSLC",
+            "school": "SHNV Hr Sec School, Sivakasi",
+            "year": "2015–2016",
+            "score": "91%"
         }
     ],
-    "skills": [
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Angular",
-        "NestJS",
-        "MongoDB",
-        "Node.js",
-        "Express.js"
-    ],
+    "skills": {
+        "frontend": ["React", "Remix", "Redux", "TypeScript", "Tailwind CSS", "Next.js", "Angular"],
+        "backend": ["Node.js", "Express.js", "NestJS", "MongoDB"],
+        "tools": ["Cloudflare", "Vercel", "Git"]
+    },
     "certifications": [
         {
             "title": "Angular Complete Guide",
@@ -76,7 +77,7 @@
     "recognition": [
         {
             "title": "Star Performer",
-            "period": "Q1 - Jan 2026",
+            "period": "Q1 - Jan 2026 (Nov 2025 - Jan 2026)",
             "company": "Skill mine",
             "description": "Awarded Star Performer of the Quarter (NV - Jan 2026) in recognition of outstanding contributions, consistent high-quality delivery, and dedication to team success."
         }

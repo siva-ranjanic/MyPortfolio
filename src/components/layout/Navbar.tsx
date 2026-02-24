@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
                 className={cn(
                     'fixed top-0 left-0 right-0 z-50 transition-all duration-400 print:hidden',
                     scrolled
-                        ? 'bg-white/90 backdrop-blur-xl shadow-sm border-b border-slate-100 py-3'
+                        ? 'bg-white/90 backdrop-blur-xl shadow-sm py-3'
                         : 'bg-transparent py-5'
                 )}
             >
@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
                     </div>
 
                     <div className="hidden md:block">
-                        <button 
+                        <button
                             onClick={() => handleNavClick('contact')}
                             className="bg-primary text-white px-8 py-3 text-xs font-black uppercase tracking-widest hover:bg-primary/90 transition-all shadow-md shadow-primary/10"
                         >

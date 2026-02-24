@@ -4,13 +4,19 @@ import portfolioData from '../data/portfolio.json';
 
 const skillThemes: Record<string, { gradient: string }> = {
   React: { gradient: 'from-[#61DAFB] to-[#0081a7]' },
+  Remix: { gradient: 'from-[#000000] to-[#E82424]' },
+  Redux: { gradient: 'from-[#764ABC] to-[#543b8a]' },
   TypeScript: { gradient: 'from-[#3178C6] to-[#004b8d]' },
   'Tailwind CSS': { gradient: 'from-[#06B6D4] to-[#0891b2]' },
+  'Next.js': { gradient: 'from-[#000000] to-[#444444]' },
   Angular: { gradient: 'from-[#DD0031] to-[#a6120d]' },
-  NestJS: { gradient: 'from-[#E0234E] to-[#9a1b3a]' },
-  MongoDB: { gradient: 'from-[#47A248] to-[#3f8a3f]' },
   'Node.js': { gradient: 'from-[#339933] to-[#215721]' },
   'Express.js': { gradient: 'from-[#000000] to-[#444444]' },
+  NestJS: { gradient: 'from-[#E0234E] to-[#9a1b3a]' },
+  MongoDB: { gradient: 'from-[#47A248] to-[#3f8a3f]' },
+  Cloudflare: { gradient: 'from-[#F38020] to-[#faad3f]' },
+  Vercel: { gradient: 'from-[#000000] to-[#444444]' },
+  Git: { gradient: 'from-[#F05032] to-[#c13017]' },
 };
 
 const skillIcons: Record<string, React.ReactNode> = {
@@ -25,20 +31,25 @@ const skillIcons: Record<string, React.ReactNode> = {
 };
 
 const nodePositions = [
-  { x: '15%', y: '20%', scale: 1.2, delay: 0.1 },
-  { x: '40%', y: '10%', scale: 0.9, delay: 0.3 },
-  { x: '70%', y: '15%', scale: 1.1, delay: 0.5 },
-  { x: '25%', y: '55%', scale: 0.8, delay: 0.2 },
-  { x: '50%', y: '45%', scale: 1.3, delay: 0.4 },
-  { x: '75%', y: '50%', scale: 1.0, delay: 0.6 },
-  { x: '35%', y: '80%', scale: 1.1, delay: 0.7 },
-  { x: '65%', y: '75%', scale: 0.9, delay: 0.8 },
+  { x: '10%', y: '15%', scale: 1.1, delay: 0.1 },
+  { x: '35%', y: '10%', scale: 0.9, delay: 0.3 },
+  { x: '60%', y: '12%', scale: 1.2, delay: 0.5 },
+  { x: '85%', y: '18%', scale: 1.0, delay: 0.2 },
+  { x: '15%', y: '45%', scale: 0.8, delay: 0.4 },
+  { x: '45%', y: '40%', scale: 1.3, delay: 0.6 },
+  { x: '75%', y: '42%', scale: 1.1, delay: 0.1 },
+  { x: '25%', y: '75%', scale: 0.9, delay: 0.3 },
+  { x: '55%', y: '70%', scale: 1.2, delay: 0.5 },
+  { x: '80%', y: '78%', scale: 1.0, delay: 0.2 },
+  { x: '30%', y: '90%', scale: 0.8, delay: 0.4 },
+  { x: '65%', y: '92%', scale: 1.1, delay: 0.6 },
 ];
 
 const TechSection = () => {
   const { skills } = portfolioData;
+  const allSkills = [...skills.frontend, ...skills.backend, ...skills.tools];
 
-  const techNodes = skills.map((skill, i) => ({
+  const techNodes = allSkills.slice(0, 12).map((skill, i) => ({
     name: skill,
     ...nodePositions[i],
   }));

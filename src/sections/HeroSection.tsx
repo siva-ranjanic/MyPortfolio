@@ -1,38 +1,55 @@
 import { ArrowRight, Github, Linkedin, Mail, Cpu, Layout, Layers } from 'lucide-react';
+import { cn } from '../utils/cn';
 import portfolioData from '../data/portfolio.json';
 
 const HeroSection = () => {
-    const { name } = portfolioData;
+    const { name, skills } = portfolioData;
 
     const sections = [
         {
             title: "Frontend Architecture",
-            skills: ["React.js", "TypeScript", "Next.js", "Tailwind CSS"],
+            skills: skills.frontend,
             icon: <Layout className="text-primary" size={18} />
         },
         {
             title: "Backend & Cloud",
-            skills: ["Node.js", "PostgreSQL", "AWS Lambda", "GraphQL"],
+            skills: skills.backend,
             icon: <Cpu className="text-primary" size={18} />
         },
         {
             title: "DevOps & Tools",
-            skills: ["Docker", "Git", "CI/CD", "Vercel"],
+            skills: skills.tools,
             icon: <Layers className="text-primary" size={18} />
         }
     ];
 
     const socialLinks = [
-        { label: "Github", value: "/sivaranjani-c", url: "https://github.com/siva-ranjanic", icon: Github },
-        { label: "Linkedin", value: "/in/sivaranjani-c", url: "https://linkedin.com/in/sivaranjani-c", icon: Linkedin },
-        { label: "Email", value: "ranjanidream13@gmail.com", url: "mailto:ranjanidream13@gmail.com", icon: Mail },
+        { label: "Github", value: "/sivaranjani-c", url: "https://github.com/siva-ranjanic", icon: Github, color: "text-[#181717]" },
+        { label: "Linkedin", value: "/in/sivaranjani-c", url: "https://linkedin.com/in/sivaranjani-c", icon: Linkedin, color: "text-[#0077b5]" },
+        { label: "Email", value: "ranjanidream13@gmail.com", url: "mailto:ranjanidream13@gmail.com", icon: Mail, color: "text-[#EA4335]" },
     ];
+
+    const handleDownloadResume = () => {
+        const link = document.createElement('a');
+        link.href = '/src/assets/certificates/Sivaranjani C _ Full Stack Developer.pdf';
+        link.download = 'Sivaranjani_C_Resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+    const handleViewWork = () => {
+        const element = document.getElementById('projects');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <section id="home" className="min-h-screen relative flex items-center overflow-hidden bg-white">
             {/* Split Background - Right Side clearly visible with a light tint */}
             <div className="absolute top-0 right-0 w-[45%] h-full bg-slate-50 hidden lg:block border-l border-slate-200" />
-            
+
             <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 relative z-10 w-full h-full mt-8">
 
                 {/* Left Column: Core Branding */}
@@ -47,17 +64,23 @@ const HeroSection = () => {
                         </div>
 
                         <div className="pl-6 border-l-2 border-primary max-w-lg animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-  <p className="text-base md:text-lg text-slate-500 leading-relaxed font-light italic">
-    <span className="text-slate-900 font-bold not-italic">{name}.</span> — Crafting intelligent, scalable web experiences for over 2.5 years. 
-    I combine performance-focused engineering, clean architecture principles, and thoughtful UI design to build digital products that solve real-world problems and scale with confidence.
-  </p>
-</div>
+                            <p className="text-base md:text-lg text-slate-500 leading-relaxed font-light italic">
+                                <span className="text-slate-900 font-bold not-italic">{name}.</span> — Crafting intelligent, scalable web experiences for over 2.5 years.
+                                I combine performance-focused engineering, clean architecture principles, and thoughtful UI design to build digital products that solve real-world problems and scale with confidence.
+                            </p>
+                        </div>
 
                         <div className="flex flex-wrap gap-4 pt-4 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                            <button className="px-8 py-4 bg-primary text-white text-[9px] font-black uppercase tracking-widest hover:bg-slate-900 transition-all flex items-center gap-3 shadow-xl shadow-primary/10 active:scale-95">
+                            <button
+                                onClick={handleViewWork}
+                                className="px-8 py-4 bg-primary text-white text-[9px] font-black uppercase tracking-widest hover:bg-slate-900 transition-all flex items-center gap-3 shadow-xl shadow-primary/10 active:scale-95"
+                            >
                                 View Work <ArrowRight size={14} />
                             </button>
-                            <button className="px-8 py-4 border border-slate-200 text-slate-900 text-[9px] font-black uppercase tracking-widest hover:bg-slate-50 transition-all active:scale-95">
+                            <button
+                                onClick={handleDownloadResume}
+                                className="px-8 py-4 border border-slate-200 text-slate-900 text-[9px] font-black uppercase tracking-widest hover:bg-slate-50 transition-all active:scale-95"
+                            >
                                 Resume
                             </button>
                         </div>
@@ -88,7 +111,7 @@ const HeroSection = () => {
                             {sections.map((section) => (
                                 <div key={section.title} className="group">
                                     <div className="flex items-start gap-5">
-                                        <div className="p-3 bg-white border border-slate-200 text-primary rounded-lg group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+                                        <div className="p-3 bg-white border border-slate-200 text-primary rounded-lg transition-all shadow-sm group-hover:border-primary/20 group-hover:shadow-md">
                                             {section.icon}
                                         </div>
                                         <div className="space-y-2">
@@ -114,7 +137,7 @@ const HeroSection = () => {
                             <span className="w-8 h-[2px] bg-primary" />
                             <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-900">Profiles</h3>
                         </div>
-                        
+
                         <div className="grid gap-3">
                             {socialLinks.map((link) => {
                                 const Icon = link.icon;
@@ -127,7 +150,7 @@ const HeroSection = () => {
                                         className="flex items-center justify-between p-4 bg-white border border-slate-200 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5 transition-all group rounded-xl"
                                     >
                                         <div className="flex items-center gap-4">
-                                            <div className="w-8 h-8 flex items-center justify-center bg-slate-50 text-slate-400 group-hover:text-primary transition-colors rounded-lg">
+                                            <div className={cn("w-8 h-8 flex items-center justify-center bg-slate-50 transition-colors rounded-lg", link.color)}>
                                                 <Icon size={16} />
                                             </div>
                                             <div>
