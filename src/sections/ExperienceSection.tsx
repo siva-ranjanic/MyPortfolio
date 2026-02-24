@@ -16,7 +16,7 @@ const ExperienceSection = () => {
                     <div className="space-y-6">
                         <div className="flex items-center gap-3">
                             <span className="w-10 h-[1px] bg-primary/20" />
-                            <h3 className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-400">Education</h3>
+                            <h3 className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-600">Education</h3>
                         </div>
 
                         <div className="grid gap-3">
@@ -30,7 +30,7 @@ const ExperienceSection = () => {
                                     </div>
                                     <div className="space-y-0.5">
                                         <h4 className="text-sm font-black font-display text-slate-900 uppercase tracking-tight">{edu.degree}</h4>
-                                        <div className="text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-relaxed">
+                                        <div className="text-[9px] font-bold text-slate-500 uppercase tracking-widest leading-relaxed">
                                             {edu.school}
                                         </div>
                                     </div>
@@ -40,7 +40,7 @@ const ExperienceSection = () => {
                                             <span className="text-[9px] font-black uppercase tracking-widest text-primary">{edu.year}</span>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <span className="text-[7px] font-black uppercase tracking-[0.3em] text-slate-300">Grade</span>
+                                            <span className="text-[7px] font-black uppercase tracking-[0.3em] text-slate-500">Grade</span>
                                             <span className="text-base font-black text-slate-900 tracking-tighter">{edu.score}</span>
                                         </div>
                                     </div>
@@ -70,7 +70,7 @@ const ExperienceSection = () => {
                                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
                                         <div className="space-y-1">
                                             <h4 className="text-lg md:text-xl font-black font-display text-slate-900 uppercase tracking-tight group-hover:text-primary transition-colors">{exp.role}</h4>
-                                            <div className="flex items-center gap-3 text-[9px] font-bold text-slate-400 uppercase tracking-widest font-sans">
+                                            <div className="flex items-center gap-3 text-[9px] font-bold text-slate-500 uppercase tracking-widest font-sans">
                                                 {exp.company} <span className="text-primary opacity-30">•</span> {exp.location || "Remote"}
                                             </div>
                                         </div>

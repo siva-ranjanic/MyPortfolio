@@ -35,20 +35,20 @@ const CertificationsSection = () => {
                                     <div className="p-3 bg-slate-50 text-slate-300 group-hover:text-primary transition-all rounded-xl">
                                         <Award size={24} />
                                     </div>
-                                    <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest">{cert.year}</span>
+                                    <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{cert.year}</span>
                                 </div>
                                 <div className="space-y-2">
                                     <h4 className="text-lg font-black font-display text-slate-900 uppercase tracking-tight group-hover:text-primary transition-colors leading-tight">
                                         {cert.title}
                                     </h4>
-                                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{cert.issuer}</p>
+                                    <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{cert.issuer}</p>
                                 </div>
                             </div>
 
                             <div className="mt-8 pt-6 border-t border-slate-50 flex items-center justify-between">
                                 <div className="flex items-center gap-2">
                                     <FileText size={14} className="text-slate-300" />
-                                    <span className="text-[8px] font-black uppercase tracking-widest text-slate-400">Official PDF</span>
+                                    <span className="text-[8px] font-black uppercase tracking-widest text-slate-500">Official PDF</span>
                                 </div>
                                 {cert.file ? (
                                     <button

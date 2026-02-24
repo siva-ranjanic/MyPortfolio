@@ -104,6 +104,7 @@ const Navbar: React.FC = () => {
                         <button
                             key={link.name}
                             onClick={() => handleNavClick(link.path)}
+                            aria-label={`Navigate to ${link.name}`}
                             className={cn(
                                 'flex items-center justify-center p-2 rounded-full transition-all duration-200 active:scale-90',
                                 active ? 'bg-primary text-white' : 'text-slate-400'

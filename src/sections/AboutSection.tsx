@@ -32,7 +32,7 @@ const AboutSection = () => {
                                 <div className="space-y-4">
                                     <div className="flex items-center gap-3">
                                         <div className="w-8 h-[1px] bg-primary" />
-                                        <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400">Core Focus</h4>
+                                        <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-600">Core Focus</h4>
                                     </div>
                                     <p className="text-sm text-slate-500 font-light leading-relaxed">
                                         Driving efficiency with clean code, scalable infrastructure, and intuitive user interfaces.
@@ -41,7 +41,7 @@ const AboutSection = () => {
                                 <div className="space-y-4">
                                     <div className="flex items-center gap-3">
                                         <div className="w-8 h-[1px] bg-primary" />
-                                        <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400">Philosophy</h4>
+                                        <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-600">Philosophy</h4>
                                     </div>
                                     <p className="text-sm text-slate-500 font-light leading-relaxed">
                                         Built on the principle that technical excellence is the result of precision and passion.

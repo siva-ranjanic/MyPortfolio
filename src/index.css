@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "@fontsource/inter/latin-300.css";
+@import "@fontsource/inter/latin-400.css";
+@import "@fontsource/inter/latin-500.css";
+@import "@fontsource/inter/latin-600.css";
+@import "@fontsource/inter/latin-700.css";
+@import "@fontsource/space-grotesk/latin-300.css";
+@import "@fontsource/space-grotesk/latin-400.css";
+@import "@fontsource/space-grotesk/latin-500.css";
+@import "@fontsource/space-grotesk/latin-600.css";
+@import "@fontsource/space-grotesk/latin-700.css";
 @import "tailwindcss";
 
 @theme {
@@ -197,7 +206,7 @@
 }
 
 @keyframes fade-out {
-    0%, 80% { opacity: 1; }
+    0%, 60% { opacity: 1; }
     100% { opacity: 0; pointer-events: none; }
 }
 
@@ -211,7 +220,7 @@
 }
 
 .animate-fade-out {
-    animation: fade-out 2.2s ease-in-out forwards;
+    animation: fade-out 1.2s ease-in-out forwards;
 }
 
 /* Hero animations */

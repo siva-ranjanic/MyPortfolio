@@ -48,7 +48,7 @@ const ContactSection = () => {
                     <div className="space-y-6">
                         <div className="inline-flex items-center gap-3">
                             <span className="w-10 h-[2px] bg-primary" />
-                            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400">Technical Inquiry</h2>
+                            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-600">Technical Inquiry</h2>
                         </div>
                         <h3 className="text-5xl md:text-6xl xl:text-7xl font-black font-display text-slate-900 uppercase leading-[0.9] tracking-tighter">
                             Let's <br />
@@ -66,7 +66,7 @@ const ContactSection = () => {
                                 <Mail size={18} />
                             </div>
                             <div>
-                                <h4 className="text-[9px] font-black uppercase tracking-[0.3em] text-slate-300 mb-1">Direct Protocol</h4>
+                                <h4 className="text-[9px] font-black uppercase tracking-[0.3em] text-slate-500 mb-1">Direct Protocol</h4>
                                 <a href={emailSocial?.url} className="text-sm font-black text-slate-900 hover:text-primary transition-colors uppercase tracking-tight">
                                     {emailSocial?.url.replace('mailto:', '')}
                                 </a>
@@ -78,7 +78,7 @@ const ContactSection = () => {
                                 <MapPin size={18} />
                             </div>
                             <div>
-                                <h4 className="text-[9px] font-black uppercase tracking-[0.3em] text-slate-300 mb-1">Base Location</h4>
+                                <h4 className="text-[9px] font-black uppercase tracking-[0.3em] text-slate-500 mb-1">Base Location</h4>
                                 <p className="text-sm font-black text-slate-900 uppercase tracking-tight">
                                     Tamil Nadu, India
                                 </p>
@@ -87,10 +87,10 @@ const ContactSection = () => {
                     </div>
 
                     <div className="flex gap-4 pt-6 border-t border-slate-100">
-                        <a href={linkedinSocial?.url} target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-slate-200 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all rounded-lg">
+                        <a href={linkedinSocial?.url} target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile" className="w-10 h-10 border border-slate-200 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all rounded-lg">
                             <Linkedin size={18} />
                         </a>
-                        <a href={githubSocial?.url} target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-slate-200 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all rounded-lg">
+                        <a href={githubSocial?.url} target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile" className="w-10 h-10 border border-slate-200 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all rounded-lg">
                             <Github size={18} />
                         </a>
                     </div>
@@ -101,8 +101,9 @@ const ContactSection = () => {
                     <form ref={formRef} onSubmit={handleSubmit} className="bg-white border border-slate-200 p-8 md:p-12 space-y-10 rounded-2xl shadow-2xl shadow-primary/5">
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="space-y-3">
-                                <label className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-400">Identity</label>
+                                <label htmlFor="contact-name" className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-600">Identity</label>
                                 <input
+                                    id="contact-name"
                                     name="name"
                                     type="text"
                                     value={formData.name}
@@ -113,8 +114,9 @@ const ContactSection = () => {
                                 />
                             </div>
                             <div className="space-y-3">
-                                <label className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-400">Credentials</label>
+                                <label htmlFor="contact-email" className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-600">Credentials</label>
                                 <input
+                                    id="contact-email"
                                     name="email"
                                     type="email"
                                     value={formData.email}
@@ -127,8 +129,9 @@ const ContactSection = () => {
                         </div>
 
                         <div className="space-y-3">
-                            <label className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-400">Transmission Data</label>
+                            <label htmlFor="contact-message" className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-600">Transmission Data</label>
                             <textarea
+                                id="contact-message"
                                 name="message"
                                 value={formData.message}
                                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}

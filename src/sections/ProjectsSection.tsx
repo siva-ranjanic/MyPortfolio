@@ -16,7 +16,7 @@ const ProjectsSection = () => {
                     <div className="space-y-6">
                         <div className="inline-flex items-center gap-3">
                             <span className="w-10 h-[2px] bg-primary" />
-                            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400">Project Index</h2>
+                            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-600">Project Index</h2>
                         </div>
                         <h3 className="text-5xl md:text-6xl xl:text-7xl font-black font-display text-slate-900 uppercase leading-[0.9] tracking-tighter">
                             Selected <br />
@@ -32,11 +32,11 @@ const ProjectsSection = () => {
                         <div className="grid grid-cols-2 gap-8">
                             <div>
                                 <div className="text-4xl font-black text-slate-900 tracking-tighter">{projects.length}</div>
-                                <div className="text-[9px] font-black text-slate-400 uppercase tracking-[0.3em] mt-1">Deployments</div>
+                                <div className="text-[9px] font-black text-slate-600 uppercase tracking-[0.3em] mt-1">Deployments</div>
                             </div>
                             <div>
                                 <div className="text-4xl font-black text-slate-900 tracking-tighter">99<span className="text-primary">%</span></div>
-                                <div className="text-[9px] font-black text-slate-400 uppercase tracking-[0.3em] mt-1">Uptime</div>
+                                <div className="text-[9px] font-black text-slate-600 uppercase tracking-[0.3em] mt-1">Uptime</div>
                             </div>
                         </div>
                         
@@ -74,7 +74,7 @@ const ProjectsSection = () => {
 
                                 <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
                                     {project.tech.map((tag) => (
-                                        <span key={tag} className="text-[8px] font-black uppercase tracking-[0.1em] text-slate-400 bg-slate-50 px-2 py-0.5 rounded-sm">
+                                        <span key={tag} className="text-[8px] font-black uppercase tracking-[0.1em] text-slate-500 bg-slate-50 px-2 py-0.5 rounded-sm">
                                             {tag}
                                         </span>
                                     ))}

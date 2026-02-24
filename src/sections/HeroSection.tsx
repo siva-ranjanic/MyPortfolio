@@ -90,11 +90,11 @@ const HeroSection = () => {
                     <div className="flex gap-12 mt-16 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                         <div className="space-y-1">
                             <div className="text-3xl md:text-4xl font-black text-slate-900 tracking-tighter">2.5<span className="text-primary">+</span></div>
-                            <div className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Years Exp.</div>
+                            <div className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Years Exp.</div>
                         </div>
                         <div className="space-y-1">
                             <div className="text-3xl md:text-4xl font-black text-slate-900 tracking-tighter">15<span className="text-primary">+</span></div>
-                            <div className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Major Works</div>
+                            <div className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Major Works</div>
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@ const HeroSection = () => {
                     <div className="space-y-8">
                         <div className="flex items-center gap-4">
                             <span className="w-8 h-[2px] bg-primary" />
-                            <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-900">Technical Arsenal</h3>
+                            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-900">Technical Arsenal</h2>
                         </div>
 
                         <div className="space-y-8">
@@ -120,7 +120,7 @@ const HeroSection = () => {
                                             </div>
                                             <div className="flex flex-wrap gap-2">
                                                 {section.skills.map(skill => (
-                                                    <span key={skill} className="text-[8px] font-bold text-slate-400 uppercase tracking-widest border border-slate-200 px-2 py-0.5 rounded-sm bg-white">
+                                                    <span key={skill} className="text-[8px] font-bold text-slate-500 uppercase tracking-widest border border-slate-200 px-2 py-0.5 rounded-sm bg-white">
                                                         {skill}
                                                     </span>
                                                 ))}
@@ -135,7 +135,7 @@ const HeroSection = () => {
                     <div className="space-y-8">
                         <div className="flex items-center gap-4">
                             <span className="w-8 h-[2px] bg-primary" />
-                            <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-900">Profiles</h3>
+                            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-900">Profiles</h2>
                         </div>
 
                         <div className="grid gap-3">
@@ -155,7 +155,7 @@ const HeroSection = () => {
                                             </div>
                                             <div>
                                                 <div className="text-[9px] font-black uppercase tracking-widest text-slate-900">{link.label}</div>
-                                                <div className="text-[9px] text-slate-400 font-medium truncate max-w-[150px]">{link.value}</div>
+                                                <div className="text-[9px] text-slate-500 font-medium truncate max-w-[150px]">{link.value}</div>
                                             </div>
                                         </div>
                                         <ArrowRight size={14} className="text-slate-200 group-hover:text-primary transition-all" />
