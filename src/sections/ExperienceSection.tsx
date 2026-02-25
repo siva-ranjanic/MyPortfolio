@@ -26,7 +26,7 @@ const ExperienceSection = () => {
                                         <div className="p-2.5 bg-slate-50 text-slate-300 group-hover:text-primary transition-all rounded-lg">
                                             <GraduationCap size={18} />
                                         </div>
-                                        <span className="text-2xl font-black text-slate-400 group-hover:text-primary transition-colors">0{i + 1}</span>
+                                        <span className="text-2xl font-black text-slate-500 group-hover:text-primary transition-colors">0{i + 1}</span>
                                     </div>
                                     <div className="space-y-0.5">
                                         <h4 className="text-sm font-black font-display text-slate-900 uppercase tracking-tight">{edu.degree}</h4>
