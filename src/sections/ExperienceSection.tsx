@@ -26,7 +26,7 @@ const ExperienceSection = () => {
                                         <div className="p-2.5 bg-slate-50 text-slate-300 group-hover:text-primary transition-all rounded-lg">
                                             <GraduationCap size={18} />
                                         </div>
-                                        <span className="text-2xl font-black text-slate-50 group-hover:text-primary/10 transition-colors" aria-hidden="true">0{i + 1}</span>
+                                        <span className="text-2xl font-black text-slate-300 group-hover:text-primary transition-colors">0{i + 1}</span>
                                     </div>
                                     <div className="space-y-0.5">
                                         <h4 className="text-sm font-black font-display text-slate-900 uppercase tracking-tight">{edu.degree}</h4>
@@ -56,7 +56,7 @@ const ExperienceSection = () => {
                         <h2 className="text-[9px] font-black uppercase tracking-[0.4em] text-primary">Technical Evolution</h2>
                         <h3 className="text-4xl md:text-5xl xl:text-6xl font-black font-display text-slate-900 uppercase leading-[0.9] tracking-tighter">
                             Technical <br />
-                            <span className="text-primary/10" style={{ WebkitTextStroke: '1px #084d43' }} aria-hidden="true">Experience</span>
+                            <span className="text-primary">Experience</span>
                         </h3>
                     </div>
 

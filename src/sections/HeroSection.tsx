@@ -59,7 +59,7 @@ const HeroSection = () => {
                         <div className="space-y-2">
                             <h1 className="text-4xl md:text-6xl xl:text-7xl font-black font-display tracking-tighter text-slate-900 leading-[0.9] uppercase animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
                                 Full-Stack <br />
-                                <span className="text-primary/10" style={{ WebkitTextStroke: '1px #084d43' }} aria-hidden="true">Developer</span>
+                                <span className="text-primary">Developer</span>
                             </h1>
                         </div>
 
