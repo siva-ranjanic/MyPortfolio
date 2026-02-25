@@ -20,7 +20,7 @@ const ProjectsSection = () => {
                         </div>
                         <h3 className="text-5xl md:text-6xl xl:text-7xl font-black font-display text-slate-900 uppercase leading-[0.9] tracking-tighter">
                             Selected <br />
-                            <span className="text-primary/10" style={{ WebkitTextStroke: '1px #084d43' }}>Works</span>
+                            <span className="text-primary/10" style={{ WebkitTextStroke: '1px #084d43' }} aria-hidden="true">Works</span>
                         </h3>
                     </div>
 
@@ -60,7 +60,7 @@ const ProjectsSection = () => {
                                     <div className="w-10 h-10 bg-slate-50 flex items-center justify-center text-slate-300 group-hover:text-primary group-hover:bg-primary/5 transition-all rounded-lg border border-slate-100">
                                         <Folder size={20} />
                                     </div>
-                                    <span className="text-[10px] font-black text-slate-200 group-hover:text-primary/10 transition-colors tracking-widest">NO. 0{index + 1}</span>
+                                    <span className="text-[10px] font-black text-slate-200 group-hover:text-primary/10 transition-colors tracking-widest" aria-hidden="true">NO. 0{index + 1}</span>
                                 </div>
 
                                 <div className="space-y-3 flex-1">
@@ -91,7 +91,7 @@ const ProjectsSection = () => {
                                             View System Architecture <ExternalLink size={12} />
                                         </a>
                                     ) : (
-                                        <span className="text-[8px] font-bold uppercase tracking-widest text-slate-300 italic">
+                                        <span className="text-[8px] font-bold uppercase tracking-widest text-slate-500 italic">
                                             Architecture Confidential
                                         </span>
                                     )}

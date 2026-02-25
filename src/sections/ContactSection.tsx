@@ -52,7 +52,7 @@ const ContactSection = () => {
                         </div>
                         <h3 className="text-5xl md:text-6xl xl:text-7xl font-black font-display text-slate-900 uppercase leading-[0.9] tracking-tighter">
                             Let's <br />
-                            <span className="text-primary/10" style={{ WebkitTextStroke: '1px #084d43' }}>Connect</span>
+                            <span className="text-primary/10" style={{ WebkitTextStroke: '1px #084d43' }} aria-hidden="true">Connect</span>
                         </h3>
                     </div>
 

@@ -22,7 +22,7 @@ const CertificationsSection = () => {
                         <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary">Validated Expertise</h2>
                         <h3 className="text-4xl md:text-6xl font-black font-display text-slate-900 uppercase leading-[0.9] tracking-tighter">
                             Professional <br />
-                            <span className="text-primary/10" style={{ WebkitTextStroke: '1px #084d43' }}>Certifications</span>
+                            <span className="text-primary/10" style={{ WebkitTextStroke: '1px #084d43' }} aria-hidden="true">Certifications</span>
                         </h3>
                     </div>
                 </div>
@@ -53,13 +53,13 @@ const CertificationsSection = () => {
                                 {cert.file ? (
                                     <button
                                         onClick={() => handleDownload(cert.file, cert.title)}
-                                        className="flex items-center gap-2 text-primary opacity-60 hover:opacity-100 transition-opacity"
+                                        className="flex items-center gap-2 text-primary opacity-80 hover:opacity-100 transition-opacity"
                                     >
                                         <span className="text-[9px] font-black uppercase tracking-widest">Download</span>
                                         <Download size={14} />
                                     </button>
                                 ) : (
-                                    <span className="text-[9px] font-black uppercase tracking-widest text-slate-200">Processing</span>
+                                    <span className="text-[9px] font-black uppercase tracking-widest text-slate-400">Processing</span>
                                 )}
                             </div>
                         </div>

@@ -86,12 +86,13 @@ const Navbar: React.FC = () => {
                     </div>
 
                     <div className="hidden md:block">
-                        <button
-                            onClick={() => handleNavClick('contact')}
-                            className="bg-primary text-white px-8 py-3 text-xs font-black uppercase tracking-widest hover:bg-primary/90 transition-all shadow-md shadow-primary/10"
+                        <a
+                            href="mailto:ranjanidream13@gmail.com"
+                            className="bg-primary text-white px-8 py-3 text-xs font-black uppercase tracking-widest hover:bg-primary/90 transition-all shadow-md shadow-primary/10 inline-flex items-center gap-2"
                         >
-                            Hire Me
-                        </button>
+                            <Mail size={14} />
+                            Get In Touch
+                        </a>
                     </div>
                 </div>
             </nav>

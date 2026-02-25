@@ -20,7 +20,7 @@ const AboutSection = () => {
                             <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary">Identity & Mission</h2>
                             <h3 className="text-5xl md:text-7xl font-black font-display text-slate-900 uppercase leading-[0.9] tracking-tighter">
                                 About <br />
-                                <span className="text-primary/10" style={{ WebkitTextStroke: '1px #084d43' }}>Myself</span>
+                                <span className="text-primary/10" style={{ WebkitTextStroke: '1px #084d43' }} aria-hidden="true">Myself</span>
                             </h3>
                         </div>
                         <div className="space-y-12">
