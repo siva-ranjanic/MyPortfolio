@@ -16,7 +16,7 @@ const ExperienceSection = () => {
                     <div className="space-y-6">
                         <div className="flex items-center gap-3">
                             <span className="w-10 h-[1px] bg-primary/20" />
-                            <h3 className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-400">Education</h3>
+                            <h3 className="text-[9px] font-black uppercase tracking-[0.4em] text-slate-600">Education</h3>
                         </div>
 
                         <div className="grid gap-3">
@@ -26,11 +26,11 @@ const ExperienceSection = () => {
                                         <div className="p-2.5 bg-slate-50 text-slate-300 group-hover:text-primary transition-all rounded-lg">
                                             <GraduationCap size={18} />
                                         </div>
-                                        <span className="text-2xl font-black text-slate-50 group-hover:text-primary/10 transition-colors">0{i + 1}</span>
+                                        <span className="text-2xl font-black text-slate-500 group-hover:text-primary transition-colors">0{i + 1}</span>
                                     </div>
                                     <div className="space-y-0.5">
                                         <h4 className="text-sm font-black font-display text-slate-900 uppercase tracking-tight">{edu.degree}</h4>
-                                        <div className="text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-relaxed">
+                                        <div className="text-[9px] font-bold text-slate-500 uppercase tracking-widest leading-relaxed">
                                             {edu.school}
                                         </div>
                                     </div>
@@ -40,7 +40,7 @@ const ExperienceSection = () => {
                                             <span className="text-[9px] font-black uppercase tracking-widest text-primary">{edu.year}</span>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <span className="text-[7px] font-black uppercase tracking-[0.3em] text-slate-300">Grade</span>
+                                            <span className="text-[7px] font-black uppercase tracking-[0.3em] text-slate-500">Grade</span>
                                             <span className="text-base font-black text-slate-900 tracking-tighter">{edu.score}</span>
                                         </div>
                                     </div>
@@ -56,7 +56,7 @@ const ExperienceSection = () => {
                         <h2 className="text-[9px] font-black uppercase tracking-[0.4em] text-primary">Technical Evolution</h2>
                         <h3 className="text-4xl md:text-5xl xl:text-6xl font-black font-display text-slate-900 uppercase leading-[0.9] tracking-tighter">
                             Technical <br />
-                            <span className="text-primary/10" style={{ WebkitTextStroke: '1px #084d43' }}>Experience</span>
+                            <span className="text-primary">Experience</span>
                         </h3>
                     </div>
 
@@ -70,7 +70,7 @@ const ExperienceSection = () => {
                                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
                                         <div className="space-y-1">
                                             <h4 className="text-lg md:text-xl font-black font-display text-slate-900 uppercase tracking-tight group-hover:text-primary transition-colors">{exp.role}</h4>
-                                            <div className="flex items-center gap-3 text-[9px] font-bold text-slate-400 uppercase tracking-widest font-sans">
+                                            <div className="flex items-center gap-3 text-[9px] font-bold text-slate-500 uppercase tracking-widest font-sans">
                                                 {exp.company} <span className="text-primary opacity-30">•</span> {exp.location || "Remote"}
                                             </div>
                                         </div>

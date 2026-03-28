@@ -22,7 +22,7 @@ const CertificationsSection = () => {
                         <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary">Validated Expertise</h2>
                         <h3 className="text-4xl md:text-6xl font-black font-display text-slate-900 uppercase leading-[0.9] tracking-tighter">
                             Professional <br />
-                            <span className="text-primary/10" style={{ WebkitTextStroke: '1px #084d43' }}>Certifications</span>
+                            <span className="text-primary">Certifications</span>
                         </h3>
                     </div>
                 </div>
@@ -35,31 +35,31 @@ const CertificationsSection = () => {
                                     <div className="p-3 bg-slate-50 text-slate-300 group-hover:text-primary transition-all rounded-xl">
                                         <Award size={24} />
                                     </div>
-                                    <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest">{cert.year}</span>
+                                    <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{cert.year}</span>
                                 </div>
                                 <div className="space-y-2">
                                     <h4 className="text-lg font-black font-display text-slate-900 uppercase tracking-tight group-hover:text-primary transition-colors leading-tight">
                                         {cert.title}
                                     </h4>
-                                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{cert.issuer}</p>
+                                    <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{cert.issuer}</p>
                                 </div>
                             </div>
 
                             <div className="mt-8 pt-6 border-t border-slate-50 flex items-center justify-between">
                                 <div className="flex items-center gap-2">
                                     <FileText size={14} className="text-slate-300" />
-                                    <span className="text-[8px] font-black uppercase tracking-widest text-slate-400">Official PDF</span>
+                                    <span className="text-[8px] font-black uppercase tracking-widest text-slate-500">Official PDF</span>
                                 </div>
                                 {cert.file ? (
                                     <button
                                         onClick={() => handleDownload(cert.file, cert.title)}
-                                        className="flex items-center gap-2 text-primary opacity-60 hover:opacity-100 transition-opacity"
+                                        className="flex items-center gap-2 text-primary opacity-80 hover:opacity-100 transition-opacity"
                                     >
                                         <span className="text-[9px] font-black uppercase tracking-widest">Download</span>
                                         <Download size={14} />
                                     </button>
                                 ) : (
-                                    <span className="text-[9px] font-black uppercase tracking-widest text-slate-200">Processing</span>
+                                    <span className="text-[9px] font-black uppercase tracking-widest text-slate-500">Processing</span>
                                 )}
                             </div>
                         </div>

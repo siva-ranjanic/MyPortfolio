@@ -16,11 +16,11 @@ const ProjectsSection = () => {
                     <div className="space-y-6">
                         <div className="inline-flex items-center gap-3">
                             <span className="w-10 h-[2px] bg-primary" />
-                            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400">Project Index</h2>
+                            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-600">Project Index</h2>
                         </div>
                         <h3 className="text-5xl md:text-6xl xl:text-7xl font-black font-display text-slate-900 uppercase leading-[0.9] tracking-tighter">
                             Selected <br />
-                            <span className="text-primary/10" style={{ WebkitTextStroke: '1px #084d43' }}>Works</span>
+                            <span className="text-primary">Works</span>
                         </h3>
                     </div>
 
@@ -32,11 +32,11 @@ const ProjectsSection = () => {
                         <div className="grid grid-cols-2 gap-8">
                             <div>
                                 <div className="text-4xl font-black text-slate-900 tracking-tighter">{projects.length}</div>
-                                <div className="text-[9px] font-black text-slate-400 uppercase tracking-[0.3em] mt-1">Deployments</div>
+                                <div className="text-[9px] font-black text-slate-600 uppercase tracking-[0.3em] mt-1">Deployments</div>
                             </div>
                             <div>
                                 <div className="text-4xl font-black text-slate-900 tracking-tighter">99<span className="text-primary">%</span></div>
-                                <div className="text-[9px] font-black text-slate-400 uppercase tracking-[0.3em] mt-1">Uptime</div>
+                                <div className="text-[9px] font-black text-slate-600 uppercase tracking-[0.3em] mt-1">Uptime</div>
                             </div>
                         </div>
                         
@@ -60,7 +60,7 @@ const ProjectsSection = () => {
                                     <div className="w-10 h-10 bg-slate-50 flex items-center justify-center text-slate-300 group-hover:text-primary group-hover:bg-primary/5 transition-all rounded-lg border border-slate-100">
                                         <Folder size={20} />
                                     </div>
-                                    <span className="text-[10px] font-black text-slate-200 group-hover:text-primary/10 transition-colors tracking-widest">NO. 0{index + 1}</span>
+                                    <span className="text-[10px] font-black text-slate-500 group-hover:text-primary transition-colors tracking-widest">NO. 0{index + 1}</span>
                                 </div>
 
                                 <div className="space-y-3 flex-1">
@@ -74,7 +74,7 @@ const ProjectsSection = () => {
 
                                 <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
                                     {project.tech.map((tag) => (
-                                        <span key={tag} className="text-[8px] font-black uppercase tracking-[0.1em] text-slate-400 bg-slate-50 px-2 py-0.5 rounded-sm">
+                                        <span key={tag} className="text-[8px] font-black uppercase tracking-[0.1em] text-slate-500 bg-slate-50 px-2 py-0.5 rounded-sm">
                                             {tag}
                                         </span>
                                     ))}
@@ -91,7 +91,7 @@ const ProjectsSection = () => {
                                             View System Architecture <ExternalLink size={12} />
                                         </a>
                                     ) : (
-                                        <span className="text-[8px] font-bold uppercase tracking-widest text-slate-300 italic">
+                                        <span className="text-[8px] font-bold uppercase tracking-widest text-slate-500 italic">
                                             Architecture Confidential
                                         </span>
                                     )}

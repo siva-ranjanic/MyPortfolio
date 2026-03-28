@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
                             href={social.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-slate-400 hover:text-primary transition-colors font-medium text-sm"
+                            className="text-slate-500 hover:text-primary transition-colors font-medium text-sm"
                         >
                             {social.platform}
                         </a>
