@@ -7,7 +7,7 @@ const CertificationsSection = () => {
     const handleDownload = (fileName: string, title: string) => {
         if (!fileName) return;
         const link = document.createElement('a');
-        link.href = `/src/assets/certificates/${fileName}.pdf`;
+        link.href = `/certificates/${fileName}.pdf`;
         link.download = `${title.replace(/\s+/g, '_')}.pdf`;
         document.body.appendChild(link);
         link.click();

@@ -31,7 +31,7 @@ const HeroSection = () => {
 
     const handleDownloadResume = () => {
         const link = document.createElement('a');
-        link.href = '/src/assets/certificates/Sivaranjani C _ Full Stack Developer.pdf';
+        link.href = '/certificates/Sivaranjani C _ Full Stack Developer.pdf';
         link.download = 'Sivaranjani_C_Resume.pdf';
         document.body.appendChild(link);
         link.click();
